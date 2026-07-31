@@ -241,6 +241,8 @@
   .item-media{ grid-column:3 / 7; }
   .item-media .frame{ background:var(--wash); aspect-ratio:16/10; overflow:hidden; }
   .item-media img{ height:100%; object-fit:cover; transition:opacity .2s linear; }
+  .item-media .frame.logo{ background:var(--paper); border:var(--rule-w) solid var(--rule); }
+  .item-media .frame.logo img{ object-fit:contain; padding:6%; }
   .item:hover .item-media img{ opacity:.88; }
   .item-body{ grid-column:7 / 12; }
   .item-tag{ color:var(--accent); display:block; margin-bottom:10px; }
@@ -396,7 +398,7 @@
     <div class="hero-shot rv">
       <figure>
         <div class="shot">
-          <img src="images/headshot.jpg" alt="Portrait of Jeh-Lei Fan, a student at the NYU Stern School of Business.">
+          <img src="images/headshot.jpg" alt="Portrait of Jeh-Lei Fan on a rooftop terrace at sunset.">
         </div>
       </figure>
     </div>
@@ -454,8 +456,8 @@
         <article class="item rv">
           <div class="item-idx mono">001</div>
           <div class="item-media">
-            <div class="frame">
-              <img src="images/courtflow.PNG" alt="CourtFlow project image showing a live availability tracker for public tennis courts.">
+            <div class="frame logo">
+              <img loading="lazy" src="images/courtflow.jpg" alt="CourtFlow logo. Streamlining tennis for everyone.">
             </div>
           </div>
           <div class="item-body">
@@ -476,7 +478,7 @@
           <div class="item-idx mono">002</div>
           <div class="item-media">
             <div class="frame">
-              <img src="images/instigator.PNG" alt="The Instigator project image showing a tool that adjusts the energy of a social event in real time.">
+              <img loading="lazy" src="images/instigator.jpg" alt="The Instigator hardware prototype: a microcontroller, sensors and an LCD screen wired on a breadboard.">
             </div>
           </div>
           <div class="item-body">
@@ -496,8 +498,8 @@
         <article class="item rv">
           <div class="item-idx mono">003</div>
           <div class="item-media">
-            <div class="frame">
-              <img src="images/plottiwst.PNG" alt="PlotTwist project image showing people moving from an online match to meeting in person.">
+            <div class="frame logo">
+              <img loading="lazy" src="images/plottwist.png" alt="PlotTwist logo.">
             </div>
           </div>
           <div class="item-body">
@@ -518,7 +520,7 @@
           <div class="item-idx mono">004</div>
           <div class="item-media">
             <div class="frame">
-              <img src="images/nyutennis.PNG" alt="Jeh-Lei Fan competing in a match for the NYU Men's Tennis team.">
+              <img loading="lazy" src="images/nyutennis.jpg" alt="Jeh-Lei Fan hitting a forehand during an NYU Men's Tennis practice.">
             </div>
           </div>
           <div class="item-body">
