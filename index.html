@@ -255,6 +255,32 @@
   .item-go a:hover{ color:var(--accent); transform:translate(3px,-3px); }
   .item-link-sm{ display:none; }
 
+  /* ---------------- Tennis ---------------- */
+  .ten-media{ grid-column:3 / 9; }
+  .ten-media .frame{ background:var(--wash); aspect-ratio:4/3; overflow:hidden; }
+  .ten-media .frame img{ height:100%; object-fit:cover; }
+  .ten-body{ grid-column:9 / 13; }
+  .ten-body p{ color:var(--grey); max-width:40ch; margin-bottom:26px; }
+  .ten-stats{ margin-bottom:26px; }
+  .ten-stats .row{
+    display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+    padding-block:11px; border-top:var(--rule-w) solid var(--rule);
+    font-size:.88rem;
+  }
+  .ten-stats .row:last-child{ border-bottom:var(--rule-w) solid var(--rule); }
+  .ten-stats .row span{ color:var(--faint); }
+  .ten-stats .row strong{ font-weight:500; text-align:right; }
+  .ten-follow{ display:grid; gap:0; border-top:var(--rule-w) solid var(--ink); }
+  .ten-follow a{
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding-block:14px; border-bottom:var(--rule-w) solid var(--rule);
+    text-decoration:none; font-size:.95rem; font-weight:500;
+    transition:padding-left .18s linear, color .15s linear;
+  }
+  .ten-follow a:hover{ padding-left:8px; color:var(--accent); }
+  .ten-follow a .go{ color:var(--faint); }
+  .ten-follow a:hover .go{ color:var(--accent); }
+
   /* ---------------- Contact ---------------- */
   .contact{ background:var(--ink); color:var(--paper); }
   .contact .sec-label .mono{ color:#7d7d7d; }
@@ -304,6 +330,8 @@
     .item-media{ grid-column:3 / 8; }
     .item-body{ grid-column:8 / 13; }
     .item-go{ display:none; }
+    .ten-media{ grid-column:1 / 8; }
+    .ten-body{ grid-column:8 / 13; }
     .item-link-sm{
       display:inline-flex; align-items:center; gap:8px;
       margin-top:18px; text-decoration:none;
@@ -323,6 +351,8 @@
     .item-idx{ grid-column:1 / 13; margin-bottom:14px; }
     .item-media{ grid-column:1 / 13; }
     .item-body{ grid-column:1 / 13; margin-top:18px; }
+    .ten-media{ grid-column:1 / 13; }
+    .ten-body{ grid-column:1 / 13; margin-top:28px; }
 
     .burger{ display:flex; }
     .nav{
@@ -366,7 +396,8 @@
     <nav class="nav mono" id="nav" aria-label="Primary">
       <a href="#about"><span class="num">01</span>About</a>
       <a href="#work"><span class="num">02</span>Work</a>
-      <a href="#contact"><span class="num">03</span>Contact</a>
+      <a href="#tennis"><span class="num">03</span>Tennis</a>
+      <a href="#contact"><span class="num">04</span>Contact</a>
     </nav>
 
     <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
@@ -415,25 +446,19 @@
 
     <div class="wrap grid">
       <div class="about-body rv">
-        <!-- ============================================================
-             The two links in this paragraph:
-             1. "NYU Men's Tennis team" points to the roster profile.
-             2. "NYU Stern" has href="#". PASTE THE BTE PROGRAM LINK THERE,
-                for example:
-                href="https://www.stern.nyu.edu/programs-admissions/undergraduate"
-        ============================================================ -->
         <p>
           I am from Arlington, VA, and grew up competing nationally in tennis and currently play
           on the <a href="https://gonyuathletics.com/sports/mens-tennis/roster/jeh-lei-fan/15609" target="_blank" rel="noopener">NYU Men's Tennis team</a>.
           In high school, I was introduced to investing and became a member of my school's
           student-run investment fund, where I developed an interest in the world of business.
-          Now, at <a href="#" target="_blank" rel="noopener">NYU Stern</a>, I'm finding where I can
+          Now, at <a href="https://www.stern.nyu.edu/programs-admissions/undergraduate/academics/bs-degree-business-technology-and-entrepreneurship" target="_blank" rel="noopener">NYU Stern</a>, I'm finding where I can
           apply my analytical mindset to business and tech.
         </p>
       </div>
 
       <aside class="about-side rv" aria-label="Details">
         <div class="row"><span class="mono">Interests</span><strong>Finance, investing, product, early stage ideas</strong></div>
+        <div class="row"><span class="mono">Instagram</span><strong><a href="https://www.instagram.com/jehlei_fan/?hl=en" target="_blank" rel="noopener">@jehlei_fan &#8599;</a></strong></div>
         <div class="row"><span class="mono">Email</span><strong><a href="mailto:jehlei.fan@gmail.com">jehlei.fan@gmail.com</a></strong></div>
       </aside>
     </div>
@@ -499,7 +524,7 @@
           <div class="item-idx mono">003</div>
           <div class="item-media">
             <div class="frame logo">
-              <img loading="lazy" src="images/plottwist.png" alt="PlotTwist logo.">
+              <img loading="lazy" src="images/plottwist.jpg" alt="PlotTwist logo.">
             </div>
           </div>
           <div class="item-body">
@@ -516,27 +541,48 @@
           </div>
         </article>
 
-        <article class="item rv">
-          <div class="item-idx mono">004</div>
-          <div class="item-media">
-            <div class="frame">
-              <img loading="lazy" src="images/nyutennis.jpg" alt="Jeh-Lei Fan hitting a forehand during an NYU Men's Tennis practice.">
-            </div>
-          </div>
-          <div class="item-body">
-            <span class="item-tag mono">Collegiate athlete</span>
-            <h3>NYU Men's Tennis</h3>
-            <p>
-              I play position 4 in the singles lineup and position 2 in doubles.
-              I was the only starting freshman on the roster.
-            </p>
-            <a class="item-link-sm" href="https://gonyuathletics.com/sports/mens-tennis/roster/jeh-lei-fan/15609" target="_blank" rel="noopener">Roster profile <span aria-hidden="true">&#8599;</span></a>
-          </div>
-          <div class="item-go">
-            <a href="https://gonyuathletics.com/sports/mens-tennis/roster/jeh-lei-fan/15609" target="_blank" rel="noopener" aria-label="View the NYU Athletics roster profile">&#8599;</a>
-          </div>
-        </article>
+      </div>
+    </div>
+  </section>
 
+  <!-- ================= TENNIS ================= -->
+  <section id="tennis">
+    <div class="wrap grid">
+      <div class="sec-label"><span class="mono">03<b>Tennis</b></span></div>
+      <div class="sec-head rv">
+        <h2>Collegiate athlete.</h2>
+        <p>I have competed in tennis since I was a kid, and I now play for NYU. Follow along if you want to keep up with the season.</p>
+      </div>
+    </div>
+
+    <div class="wrap grid">
+      <div class="ten-media rv">
+        <div class="frame">
+          <img loading="lazy" src="images/nyutennis.jpg" alt="Jeh-Lei Fan hitting a forehand during an NYU Men's Tennis practice.">
+        </div>
+      </div>
+
+      <div class="ten-body rv">
+        <p>
+          I play position 4 in the singles lineup and position 2 in doubles.
+          I was the only starting freshman on the roster.
+        </p>
+
+        <div class="ten-stats">
+          <div class="row"><span class="mono">Singles</span><strong>Position 4</strong></div>
+          <div class="row"><span class="mono">Doubles</span><strong>Position 2</strong></div>
+          <div class="row"><span class="mono">Class</span><strong>Only starting freshman</strong></div>
+          <div class="row"><span class="mono">Before NYU</span><strong>Competed nationally</strong></div>
+        </div>
+
+        <div class="ten-follow">
+          <a href="https://gonyuathletics.com/sports/mens-tennis/roster/jeh-lei-fan/15609" target="_blank" rel="noopener">
+            <span>Roster profile</span><span class="go mono">NYU Athletics &#8599;</span>
+          </a>
+          <a href="https://www.instagram.com/jehlei_fan/?hl=en" target="_blank" rel="noopener">
+            <span>Follow the season</span><span class="go mono">Instagram &#8599;</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -544,7 +590,7 @@
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="contact">
     <div class="wrap grid">
-      <div class="sec-label"><span class="mono">03<b>Contact</b></span></div>
+      <div class="sec-label"><span class="mono">04<b>Contact</b></span></div>
       <div class="contact-body">
         <h2>Let's build something.</h2>
         <p>
@@ -575,6 +621,7 @@
     <nav class="mono" aria-label="Footer">
       <a href="#about">About</a>
       <a href="#work">Work</a>
+      <a href="#tennis">Tennis</a>
       <a href="#contact">Contact</a>
       <a href="#top">Top</a>
     </nav>
